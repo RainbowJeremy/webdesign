@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block body %}
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+<div class="login-form-holder">
+    <form method="post">
+        <label for="username">Username</label>
+        <br>
+        <input type="text" name="username"
+               placeholder="Username"
+               value="{{ request.form['username'] }}"></input>
+        <br>
+        <label for="email">Email</label>
+        <br>
+        <input type="text" name="email"
+               placeholder="Enter your email"
+               value="{{ request.form['email'] }}"></input>
+        <br>
+
+        <br>
+        
+        <button type="submit">Submit</button>
+    </form>
+</div>
+{% endblock %}

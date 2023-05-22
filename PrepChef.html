@@ -1,0 +1,231 @@
+<!doctype html>
+<html>
+    <head>
+        <title>PrepChef</title>
+        <link rel="stylesheet" href="../static/css/main.css">
+        
+        
+    </head>
+    <body>
+        
+      
+
+      <nav>
+        <div style="margin:25px;">
+          <a href="/">
+            <img class='logo' src="../static/logo.png" alt="PrepChef with a green and yellow logo beside it">
+          </a>
+        </div>
+        <div class="wrapper" style="float: right; padding: 5px; margin: 5px 15px;">
+          <div class="menu">
+            <ul class="menu__list">
+              <li class="menu__list__item"><a href="/login">Sign Up</a></li>
+              <li class="menu__list__item"><a href="/partner">Partner With Us</a></li>
+              <li class="menu__list__item"><a href="/dashboard">Dashboard</a></li>
+              <li class="menu__list__item"><a href="/subscribe">Subscribe</a></li>
+              <li class="menu__list__item"><a href="/order">Order Now</a></li>
+            </ul>
+          </div>
+          <div class="button">
+            <span class="button__line"></span>
+            <span class="button__line"></span>
+            <span class="button__line"></span>
+          </div>
+        
+        </div>
+        <ul class="navbar" >
+          <li class="navitem"><a href="/login">Sign Up</a></li>
+          <li class="navitem"><a href="/partner">Partner With Us</a></li>
+          <li class="navitem"><a href="/dashboard">Dashboard</a></li>
+          <li class="navitem"><a href="/subscribe">Subscribe</a></li>
+          <li class="navitem"><a href="/order">Order Now</a></li>
+        </ul>
+      </nav>
+
+
+
+            
+
+
+
+<div class="cart" >
+    <div class="cart-head">
+</div>
+<div class="cart-head" style="top:-20px;">
+    <h2 style="padding:10px;" onclick="slide();">Cart</h2>
+</div>
+
+    <div class="cart-body">
+        <div class="cart-contents">
+            None
+        </div>
+        <button>Checkout</button>
+    </div>
+</div>
+
+
+
+<div style="margin-top: 90px;"><h1>Our Menu</h1></div>
+
+<div class="menu-container">
+    <div class="menu-item" id="myBtn1">
+      <img src="../static/mealimagess/healthymeal1.jpeg" alt="food item">
+      <h2>Food Item Title</h2>
+      <p class="price">$10.99</p>
+    </div>
+    <div id="myModal1" class="modal">
+        <div class="modal-content">
+            <span class="close1">&times;</span>
+            <div class="modal-body" style="display:flex;flex-direction: row; justify-content: space-around;">
+                <div>
+                    <h2>Food Item Title</h2>
+                    <p class="price">$10.99</p> 
+                    <button>Add to Cart</button>
+                </div> 
+                <div>
+                    <img src="https://via.placeholder.com/150x150" alt="food item">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="menu-item" id="myBtn2">
+      <img src="../static/mealimagess/meal2.jpeg" alt="food item">
+      <h2>Food Item Title</h2>
+      <p class="price">$8.99</p>
+    </div>
+    <div id="myModal2" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close2">&times;</span>
+            <div class="modal-body" style="display:flex;flex-direction: row; justify-content: space-around;">
+                <div>
+                    <h2>Food Item Title</h2>
+                    <p class="price">$8.99</p> 
+                    <button>Add to Cart</button>
+                </div> 
+                <div>
+                    <img src="https://via.placeholder.com/150x150" alt="food item">
+                </div>
+            </div>
+        </div>  
+    </div>
+
+
+    <div class="menu-item" id="myBtn3">
+      <img src="../static/mealimagess/meal3.jpeg" alt="food item">
+      <h2>Food Item Title</h2>
+      <p class="price">$12.99</p>
+    </div>
+    <div id="myModal3" class="modal">
+
+        <div class="modal-content">
+            <span class="close3">&times;</span>
+            <div class="modal-body" style="display:flex;flex-direction: row; justify-content: space-around;">
+                <div>
+                    <h2>Food Item Title</h2>
+                    <p class="price">$12.99</p> 
+                    <button>Add to Cart</button>
+                </div> 
+                <div>
+                    <img src="https://via.placeholder.com/150x150" alt="food item">
+                </div>
+            </div>
+        </div>
+        
+    </div>
+  
+  </div>
+
+  <script>
+// Get the modal
+var modal1 = document.getElementById("myModal1");
+var modal2 = document.getElementById("myModal2");
+var modal3 = document.getElementById("myModal3");
+const modals = [modal1,modal2,modal3];
+
+// Get the button that opens the modal
+var btn1 = document.getElementById("myBtn1");
+var btn2 = document.getElementById("myBtn2");
+var btn3 = document.getElementById("myBtn3");
+
+// Get the <span> element that closes the modal
+var span1 = document.getElementsByClassName("close1")[0];
+var span2 = document.getElementsByClassName("close2")[0];
+var span3 = document.getElementsByClassName("close3")[0];
+
+// When the user clicks on the button, open the modal 
+btn1.onclick = function() {
+  modal1.style.display = "block";
+}
+btn2.onclick = function() {
+  modal2.style.display = "block";
+}
+btn3.onclick = function() {
+  modal3.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span1.onclick = function() {
+  modal1.style.display = "none";
+}
+span2.onclick = function() {
+  modal2.style.display = "none";
+}
+span3.onclick = function() {
+  modal3.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal1) {
+    modal1.style.display = "none";
+  }
+  if (event.target == modal2) {
+    modal2.style.display = "none";
+  }
+  if (event.target == modal3) {
+    modal3.style.display = "none";
+  }
+}
+
+
+const cartBody = document.querySelector(".cart-contents");
+
+for (let i = 0; i < modals.length; i++) { 
+    var m = modals[i]
+    const addToCartBtn = m.querySelector("button");
+    const modalTitle = m.querySelector("h2");
+    const modalPrice = m.querySelector(".price");
+
+
+    addToCartBtn.addEventListener("click", function() {
+    const newTitle = modalTitle.cloneNode(true);
+    const newPrice = modalPrice.cloneNode(true);
+
+    cartBody.appendChild(newTitle);
+    cartBody.appendChild(newPrice);
+    });
+}
+
+const cart = document.querySelector(".cart");
+function slide() {
+  cart.classList.toggle('hide');
+}
+
+
+</script>
+
+
+
+        <script>
+            document.querySelector('.button').addEventListener('click', () => {
+              document.querySelector('.menu__list')
+                .classList.toggle('menu__list--animate');
+            });
+        </script>
+    </body>
+
+</html>
